@@ -1,0 +1,46 @@
+{
+    "sentiment_model": "best_sentiment_model.h5",
+    "predictive_model": "xgboost_recommendation_model.pkl",
+    "vectorizer": "tfidf_vectorizer.pkl",
+    "columns": {
+        "product": "Nama Produk",
+        "review": "comment-",
+        "rating": "rating"
+    },
+    "feature_columns": [
+        "avg_sentiment_score",
+        "positive_rate",
+        "avg_rating",
+        "review_count",
+        "avg_review_length",
+        "sentiment_consistency"
+    ],
+    "sentiment_comparison": {
+        "accuracy": {
+            "Logistic Regression": 0.9563,
+            "Random Forest": 0.9643,
+            "SVM": 0.965,
+            "DNN": 0.9723
+        },
+        "precision": {
+            "Logistic Regression": 0.987,
+            "Random Forest": 0.9784,
+            "SVM": 0.982,
+            "DNN": 0.9744
+        },
+        "recall": {
+            "Logistic Regression": 0.9677,
+            "Random Forest": 0.985,
+            "SVM": 0.982,
+            "DNN": 0.9977
+        },
+        "f1": {
+            "Logistic Regression": 0.9773,
+            "Random Forest": 0.9817,
+            "SVM": 0.982,
+            "DNN": 0.9859
+        }
+    },
+    "best_sentiment_model": "DNN",
+    "training_date": "2025-12-04 09:43:13"
+}
