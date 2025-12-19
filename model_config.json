@@ -9,24 +9,24 @@
     },
     "feature_columns": [
         "avg_sentiment_score",
+        "std_sentiment_score",
         "positive_rate",
         "avg_rating",
-        "review_count",
-        "avg_review_length",
-        "sentiment_consistency"
+        "std_rating",
+        "review_count"
     ],
     "sentiment_comparison": {
         "accuracy": {
             "Logistic Regression": 0.9563,
             "Random Forest": 0.9643,
             "SVM": 0.965,
-            "DNN": 0.9723
+            "DNN": 0.9716
         },
         "precision": {
             "Logistic Regression": 0.987,
             "Random Forest": 0.9784,
             "SVM": 0.982,
-            "DNN": 0.9744
+            "DNN": 0.9736
         },
         "recall": {
             "Logistic Regression": 0.9677,
@@ -38,9 +38,9 @@
             "Logistic Regression": 0.9773,
             "Random Forest": 0.9817,
             "SVM": 0.982,
-            "DNN": 0.9859
+            "DNN": 0.9856
         }
     },
     "best_sentiment_model": "DNN",
-    "training_date": "2025-12-04 09:43:13"
+    "training_date": "2025-12-19 10:53:22"
 }
