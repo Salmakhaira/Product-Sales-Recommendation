@@ -8,3 +8,5 @@ plotly
 imbalanced-learn
 tensorflow
 xgboost
+matplotlib
+seaborn
