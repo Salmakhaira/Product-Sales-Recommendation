@@ -1,0 +1,48 @@
+{
+  "approach": "Hybrid: DNN Sentiment + Machine Learning Sales Classification",
+  "models": {
+    "sentiment_model": "best_sentiment_model.h5",
+    "sales_model": "best_sales_classifier.pkl",
+    "vectorizer": "tfidf_vectorizer.pkl"
+  },
+  "dataset_info": {
+    "columns": {
+      "product": "Nama Produk",
+      "review": "comment-",
+      "rating": "rating"
+    },
+    "features_used": [
+      "avg_sentiment",
+      "std_sentiment",
+      "positive_rate",
+      "avg_rating",
+      "std_rating",
+      "review_count"
+    ],
+    "total_reviews": 6856,
+    "total_products": 1627
+  },
+  "best_models": {
+    "sentiment": "DNN",
+    "sales": "Logistic Regression"
+  },
+  "model_performance": {
+    "sentiment_f1": 0.9855,
+    "sentiment_roc_auc": 0.8349,
+    "sales_cv_f1": 0.7194,
+    "sales_test_roc_auc": 0.7038
+  },
+  "sales_threshold": 10.0,
+  "hybrid_formula": {
+    "sentiment_weight": 0.4,
+    "sales_prediction_weight": 0.2,
+    "positive_rate_weight": 0.3,
+    "review_count_weight": 0.1
+  },
+  "recommendation_categories": {
+    "Produk Unggulan": "score >= 0.75",
+    "Produk Stabil": "0.5 <= score < 0.75",
+    "Perlu Evaluasi": "score < 0.5"
+  },
+  "training_date": "2026-01-05 21:56:58"
+}
