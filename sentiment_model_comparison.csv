@@ -1,5 +1,0 @@
-,accuracy,precision,recall,f1
-Logistic Regression,0.9563,0.987,0.9677,0.9773
-Random Forest,0.9643,0.9784,0.985,0.9817
-SVM,0.965,0.982,0.982,0.982
-DNN,0.9716,0.98,0.991,0.9855
