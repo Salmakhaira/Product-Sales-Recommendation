@@ -1,11 +1,3 @@
-"""
-Product Sales Recommendation System
-AI-Powered Product Analysis with Deep Neural Network & Machine Learning
-
-Author: Salma
-BINUS University - Data Science
-"""
-
 import streamlit as st
 import pandas as pd
 import numpy as np
