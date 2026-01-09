@@ -509,6 +509,30 @@ def main():
                         
                         # Sample reviews
                         st.markdown("---")
+                        
+                                                # Simple recommendations
+                        if result['recommendation_category'] == 'Produk Unggulan':
+                            st.success("""
+                            **💡 Rekomendasi:**
+                            - Produk ini memiliki tingkat penerimaan yang sangat tinggi dari pelanggan dan dapat dijadikan benchmark dalam pengembangan produk baru dengan karakteristik serupa.
+                            - Fitur serta karakteristik produk terbukti unggul. Perlu dilakukan analisis mendalam terhadap faktor-faktor utama yang mendorong keberhasilan produk ini.
+                            - Kualitas produk perlu dipertahankan, serta formula keberhasilannya dapat direplikasi dan diadaptasi pada pengembangan produk lain.
+                            """)
+                        elif result['recommendation_category'] == 'Produk Stabil':
+                            st.info("""
+                            **💡 Rekomendasi:**
+                            - Produk ini menunjukkan performa yang cukup baik, namun masih memiliki ruang untuk pengembangan dan penyempurnaan.
+                            - Lakukan perbandingan dengan produk unggulan (top-performing products) untuk mengidentifikasi aspek yang masih dapat ditingkatkan.
+                            - roduk ini dapat dimanfaatkan sebagai objek eksperimen untuk pengujian peningkatan fitur maupun kualitas produk.
+                            """)
+                        else:  # Perlu Evaluasi
+                            st.warning("""
+                            **💡 Rekomendasi:**
+                            - Lakukan evaluasi menyeluruh terhadap ulasan negatif pelanggan untuk mengidentifikasi penyebab utama rendahnya minat pasar.
+                            - Hindari pengembangan produk baru dengan karakteristik yang serupa sebelum dilakukan perbaikan signifikan.
+                            - Evaluasi kesesuaian produk terhadap target pasar, serta pertimbangkan kebutuhan perubahan strategis yang bersifat fundamental.
+                            """)
+                        
                         st.markdown("### 💬 Sample Reviews")
                         
                         product_reviews = df[df[product_col] == selected_product][[review_col, rating_col]].head(5)
