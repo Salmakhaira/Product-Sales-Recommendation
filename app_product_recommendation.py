@@ -288,7 +288,7 @@ def predict_recommendation(product_name, df, sentiment_model, vectorizer, sales_
     
     review_count = len(reviews)
     
-    # Step 2: Sales prediction with XGBoost
+    # Step 2: Sales prediction with Logistic Regression
     feature_df = pd.DataFrame([{
         'avg_sentiment': avg_sentiment,
         'std_sentiment': std_sentiment,
@@ -390,12 +390,6 @@ def main():
             st.info("""
             **Please ensure you have the following model files in the same directory as this app:**
             
-            **Option 1 (Primary names):**
-            - `sentiment_dnn_model.h5` (Sentiment Analysis Model)
-            - `tfidf_vectorizer.pkl` (Text Vectorizer)
-            - `xgboost_sales_model.pkl` (Sales Prediction Model)
-            
-            **Option 2 (Alternative names):**
             - `best_sentiment_model.h5`
             - `vectorizer.pkl`
             - `best_sales_classifier.pkl`
@@ -733,7 +727,7 @@ def main():
         - Identifies positive/negative sentiments
         
         **Step 2: Sales Prediction**
-        - XGBoost model predicts sales potential
+        - Logistic Regression model predicts sales potential
         - Based on historical patterns and ratings
         
         **Step 3: Hybrid Score**
